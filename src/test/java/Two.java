@@ -5,17 +5,14 @@ import org.testng.annotations.Test;
 import static com.codeborne.selenide.Selenide.element;
 import static com.codeborne.selenide.Selenide.open;
 
-public class Six {
-
-    SelenideElement dateAndTimeInput = element(Selectors.byAttribute("name", "date_time"));
+public class Two extends CommonCond {
+    String mockData = "";
+    SelenideElement form = element(Selectors.byAttribute("type", "number"));
 
     @Test
     public void checkInput() {
-        open("http://testingchallenges.thetestingmap.org/challenge6.php");
-        dateAndTimeInput.sendKeys();
-
-
+        open("http://testingchallenges.thetestingmap.org/challenge2.php");
+        form.sendKeys("545454");
+        submitButton.click();
     }
-
-
 }

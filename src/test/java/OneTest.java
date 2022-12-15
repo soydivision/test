@@ -5,10 +5,9 @@ import org.testng.annotations.Test;
 
 import static com.codeborne.selenide.Selenide.*;
 
-public class FirstCh extends CommonCond {
+public class OneTest extends CommonCond {
     String mockName = "Michael101";
     SelenideElement firstName = element(Selectors.byId("firstname"));
-    SelenideElement submitButton = element(Selectors.byAttribute("type", "submit"));
     SelenideElement confirmation = element(Selectors.byXpath("//*[contains(text()," + mockName + ")]"));
 
     @Test
