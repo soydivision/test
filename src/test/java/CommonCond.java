@@ -1,12 +1,12 @@
+import com.codeborne.selenide.Selectors;
+import com.codeborne.selenide.SelenideElement;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeSuite;
 
-import static com.codeborne.selenide.Selenide.clearBrowserCookies;
-import static com.codeborne.selenide.Selenide.open;
+import static com.codeborne.selenide.Selenide.*;
 
 public class CommonCond {
-
-    public final String MAIN_URL = "http://testingchallenges.thetestingmap.org/index.php";
+    SelenideElement submitButton = element(Selectors.byAttribute("type", "submit"));
 
     @BeforeSuite(alwaysRun = true)
     void beforeSuiteSetUp() {
