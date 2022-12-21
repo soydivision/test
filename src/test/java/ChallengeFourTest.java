@@ -14,36 +14,35 @@ public class ChallengeFourTest {
 
     @Test
     public void validateFirstCNP() {
-        String expectedValueOne = "1"; // firstCNP expected success rate
+        String expectedValue = "1"; // firstCNP expected success rate
         String testOne = challengeFourService.checkCNP(DataGenerator.generateCNP());
-        //Assert.assertEquals(testOne, expectedValueOne);
+        Assert.assertEquals(testOne, expectedValue);
     }
 
     @Test(dependsOnMethods = "validateFirstCNP")
     public void checkInputTwo() {
-        String expectedValueTwo = "2";
+        String expectedValue = "2";
         String testOne = challengeFourService.checkCNP(DataGenerator.generateCNP());
-        // Assert.assertEquals(testOne, expectedValueTwo);
+        Assert.assertEquals(testOne, expectedValue);
     }
 
     @Test(dependsOnMethods = "checkInputTwo")
     public void checkInputThree() {
-        String expectedValueTwo = "3";
+        String expectedValue = "3";
         String testOne = challengeFourService.checkCNP(DataGenerator.generateCNP());
-        //  Assert.assertEquals(testOne, expectedValueTwo);
+        Assert.assertEquals(testOne, expectedValue);
     }
 
     @Test(dependsOnMethods = "checkInputThree")
     public void checkInputFour() {
-        String expectedValueTwo = "4";
+        String expectedValue = "4";
         String testOne = challengeFourService.checkCNP(DataGenerator.generateCNP());
-        //  Assert.assertEquals(testOne, expectedValueTwo);
+        Assert.assertEquals(testOne, expectedValue);
     }
 
     @Test(dependsOnMethods = "checkInputFour")
     public void checkInputFive() {
-        String expectedValueTwo = "";
-        String textone = challengeFourService.submitValue(DataGenerator.generateCNP()).getFinalMessage();
-        Assert.assertEquals(textone, "YOU HAVE DONE IT. Please enter your name.");
+        String successMessage = challengeFourService.submitValue(DataGenerator.generateCNP()).getFinalMessage();
+        Assert.assertEquals(successMessage, "YOU HAVE DONE IT. Please enter your name.");
     }
 }

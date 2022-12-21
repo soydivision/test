@@ -21,7 +21,7 @@ public class DataGenerator {
         CNP.append(RandomNumberGen.getRandomNumberAsFormattedString(0, 999, 3));
         ControlNumberMultiplier.countLastDigit(CNP.toString());
         CNP.append(ControlNumberMultiplier.countLastDigit(CNP.toString()));
-        System.out.println(CNP);
+        //System.out.println(CNP);
         return CNP.toString();
     }
 }
