@@ -8,26 +8,26 @@ import static com.codeborne.selenide.Selenide.element;
 public class ChallengeFourPage {
 
     private SelenideElement submit = element(Selectors.byAttribute("type", "submit"));
-    private SelenideElement input = element(Selectors.byXpath("//input[@class='inputbox']"));
-    private SelenideElement success = element(Selectors.byXpath("//span[@class='values-tested']"));
-    private SelenideElement finalMessage = element(Selectors.byText("YOU HAVE DONE IT. Please enter your name."));
+    private SelenideElement inputFieldForCNP = element(Selectors.byXpath("//input[@class='inputbox']"));
+    private SelenideElement successfulCNPCount = element(Selectors.byXpath("//span[@class='values-tested']"));
+    private SelenideElement finalSuccessMessage = element(Selectors.byText("YOU HAVE DONE IT. Please enter your name."));
 
     public ChallengeFourPage clickSubmit() {
         submit.click();
         return this;
     }
 
-    public ChallengeFourPage setInput(String value) {
-        input.sendKeys(value);
+    public ChallengeFourPage setInputFieldForCNP(String value) {
+        inputFieldForCNP.sendKeys(value);
         return this;
     }
 
-    public String getTextSuccessValues() {
-        return success.getText();
+    public String getSuccessfulCNPCount() {
+        return successfulCNPCount.getText();
     }
 
-    public String getFinalMessage() {
-        return finalMessage.getText();
+    public String getFinalSuccessMessage() {
+        return finalSuccessMessage.getText();
     }
 }
 

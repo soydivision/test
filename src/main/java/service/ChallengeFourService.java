@@ -13,18 +13,18 @@ public class ChallengeFourService {
     }
 
     public String checkCNP(String value) {
-        return page.setInput(value)
+        return page.setInputFieldForCNP(value)
                 .clickSubmit()
-                .getTextSuccessValues();
+                .getSuccessfulCNPCount();
     }
 
     public ChallengeFourPage submitValue(String value) {
-        return page.setInput(value)
+        return page.setInputFieldForCNP(value)
                 .clickSubmit();
     }
 
     public String checkFinalMessage(String value) {
-        return page.getFinalMessage();
+        return page.getFinalSuccessMessage();
     }
 
 }

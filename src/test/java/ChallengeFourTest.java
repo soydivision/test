@@ -42,7 +42,7 @@ public class ChallengeFourTest {
 
     @Test(dependsOnMethods = "checkInputFour")
     public void checkInputFive() {
-        String successMessage = challengeFourService.submitValue(DataGenerator.generateCNP()).getFinalMessage();
+        String successMessage = challengeFourService.submitValue(DataGenerator.generateCNP()).getFinalSuccessMessage();
         Assert.assertEquals(successMessage, "YOU HAVE DONE IT. Please enter your name.");
     }
 }
